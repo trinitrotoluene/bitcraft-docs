@@ -1,0 +1,37 @@
+{
+  "name": "bitcraft-docs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A monorepo for building documentation for the Bitcraft MMO",
+  "scripts": {
+    "lint": "pnpm run --workspace --if-present lint",
+    "format": "pnpm run --workspace --if-present format",
+    "typecheck": "pnpm run --workspace --if-present typecheck",
+    "prepare": "husky install",
+    "prebuild": "pnpm run format && pnpm run lint && pnpm run typecheck",
+    "build": "pnpm run --workspace --if-present build",
+    "test": "pnpm run --workspace --if-present test",
+    "start": "pnpm run --workspace --if-present start"
+  },
+  "author": "trinitrotoluene",
+  "license": "MIT",
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "@eslint/js": "^9.39.2",
+    "@tsconfig/node24": "^24.0.3",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vitest": "^4.0.16"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "volta": {
+    "node": "24.12.0"
+  }
+}

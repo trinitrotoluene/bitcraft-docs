@@ -1,0 +1,31 @@
+{
+  "name": "@bitcraft-docs/schema-compiler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "typecheck": "tsc",
+    "format:file": "prettier --write",
+    "format": "pnpm run format:file '**/*.{ts,tsx,js,jsx,json,md,mdx,yml,yaml}'",
+    "lint:file": "eslint --fix",
+    "lint": "pnpm run lint:file .",
+    "build": "tsup src/index.ts --format esm --dts --out-dir dist --clean"
+  },
+  "dependencies": {
+    "zod": "^4.2.1",
+    "@bitcraft-docs/schema-parser": "workspace:../schema-parser"
+  }
+}
