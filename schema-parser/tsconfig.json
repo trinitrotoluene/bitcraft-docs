@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/node24/tsconfig.json",
+  "include": ["src/", "../schema-compiler/index.test.ts"],
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "types": ["node"],
+    "module": "esnext",
+    "moduleResolution": "bundler"
+  }
+}

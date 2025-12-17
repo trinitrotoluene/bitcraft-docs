@@ -1,0 +1,4 @@
+packages:
+  - 'schema-compiler'
+  - 'schema-parser'
+  - 'website'

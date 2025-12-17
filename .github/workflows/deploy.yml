@@ -1,0 +1,45 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Fetch schema
+        run: pnpm fetch-schema
+
+      - name: Generate region module documentation
+        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-module.json --output-tables ../website/docs/region-tables --output-types ../website/docs/region-types --output-reducers ../website/docs/region-reducers
+
+      - name: Generate global module documentation
+        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-global.json --output-tables ../website/docs/global-tables --output-types ../website/docs/global-types --output-reducers ../website/docs/global-reducers
+
+      - name: Build site
+        run: pnpm build:site
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build

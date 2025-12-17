@@ -1,0 +1,6 @@
+{
+  "*.{ts,tsx,js,jsx,json,md,mdx,yml,yaml}": [
+    "pnpm format:file",
+    "pnpm lint:file"
+  ]
+}

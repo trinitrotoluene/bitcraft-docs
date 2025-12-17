@@ -1,0 +1,42 @@
+{
+  "name": "bitcraft-docs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A monorepo for building documentation for the Bitcraft MMO",
+  "scripts": {
+    "fetch-schema": "pnpm -r test:refresh-data",
+    "lint": "pnpm run -r lint",
+    "format": "pnpm run -r format",
+    "typecheck": "pnpm run -r typecheck",
+    "prepare": "husky",
+    "prebuild": "pnpm run -r format && pnpm run -r lint",
+    "build": "pnpm run -r --filter='!@bitcraft-docs/website' build && pnpm run -r typecheck",
+    "build:site": "pnpm run -r --filter='@bitcraft-docs/website' build",
+    "test": "pnpm run -r test",
+    "start": "pnpm run -r start"
+  },
+  "author": "trinitrotoluene",
+  "license": "MIT",
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "@eslint/js": "^9.39.2",
+    "@tsconfig/node24": "^24.0.3",
+    "@types/node": "^25.0.2",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.50.0",
+    "vitest": "^4.0.16"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "volta": {
+    "node": "24.12.0"
+  }
+}
