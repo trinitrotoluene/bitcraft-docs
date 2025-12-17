@@ -9,8 +9,8 @@
     "format": "pnpm run -r format",
     "typecheck": "pnpm run -r typecheck",
     "prepare": "husky",
-    "prebuild": "pnpm run -r format && pnpm run -r lint && pnpm run -r typecheck",
-    "build": "pnpm run -r --filter='!@bitcraft-docs/website' build",
+    "prebuild": "pnpm run -r format && pnpm run -r lint",
+    "build": "pnpm run -r --filter='!@bitcraft-docs/website' build && pnpm run -r typecheck",
     "build:site": "pnpm run -r --filter='@bitcraft-docs/website' build",
     "test": "pnpm run -r test",
     "start": "pnpm run -r start"
