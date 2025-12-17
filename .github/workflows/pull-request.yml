@@ -25,3 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
+      - name: Fetch schema
+        run: pnpm fetch-schema
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test

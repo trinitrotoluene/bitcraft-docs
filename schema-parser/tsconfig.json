@@ -1,6 +1,6 @@
 {
   "extends": "@tsconfig/node24/tsconfig.json",
-  "include": ["src/"],
+  "include": ["src/", "../schema-compiler/index.test.ts"],
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,

@@ -32,7 +32,7 @@ function generateSingleTypeDoc(
   type: TypeDefinition,
   parsedSchema: ParsedSchema,
 ) {
-  return `# Type: ${typeName}
+  return `# ${typeName}
 
 \`\`\`typescript
 ${renderType(type, parsedSchema)};
