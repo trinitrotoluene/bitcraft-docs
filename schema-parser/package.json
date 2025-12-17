@@ -17,6 +17,7 @@
   "scripts": {
     "test": "vitest --run",
     "test:watch": "vitest",
+    "test:refresh-data": "tsx ./src/__meta__/refresh-test-data.ts",
     "typecheck": "tsc",
     "format:file": "prettier --write",
     "format": "pnpm run format:file '**/*.{ts,tsx,js,jsx,json,md,mdx,yml,yaml}'",

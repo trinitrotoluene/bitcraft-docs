@@ -4,6 +4,9 @@
   "compilerOptions": {
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["node"],
+    "module": "esnext",
+    "moduleResolution": "bundler"
   }
 }

@@ -22,10 +22,13 @@
     "format": "pnpm run format:file '**/*.{ts,tsx,js,jsx,json,md,mdx,yml,yaml}'",
     "lint:file": "eslint --fix",
     "lint": "pnpm run lint:file .",
-    "build": "tsup src/index.ts --format esm --dts --out-dir dist --clean"
+    "start": "tsx src/index.ts"
   },
   "dependencies": {
-    "zod": "^4.2.1",
-    "@bitcraft-docs/schema-parser": "workspace:../schema-parser"
+    "@bitcraft-docs/schema-parser": "workspace:../schema-parser",
+    "commander": "^14.0.2",
+    "fast-glob": "^3.3.3",
+    "markdown-table": "^3.0.4",
+    "zod": "^4.2.1"
   }
 }
