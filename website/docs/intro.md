@@ -15,6 +15,7 @@ You can think of reducers like stored procedures in other database systems. They
 :::warning
 Do not call reducers. This will likely get you banned.
 :::
+
 ### Subscriptions
 
 When a reducer changes data, that change needs to be broadcast to anyone interested in that data. Subscriptions are how your app tells SpacetimeDB what data you're interested in receiving.

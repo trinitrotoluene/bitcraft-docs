@@ -70,11 +70,12 @@ function mapType(type: AlgebraicType): TypeDefinition {
   switch (true) {
     case isComplexType(type):
       return mapComplexType(type);
-    default:
+    default: {
       const tag = getAlgebraicType(type);
       return {
         type: tag as PrimitiveType["type"],
       };
+    }
   }
 }
 
