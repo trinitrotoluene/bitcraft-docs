@@ -35,7 +35,7 @@ console.log(
 
 if (options.outputTables) {
   console.log("Generating table docs...");
-  generateTableDocs(parsedSchema, options.outputTables);
+  generateTableDocs(parsedSchema, options.outputTables, options.outputTypes);
 }
 
 if (options.outputTypes) {
