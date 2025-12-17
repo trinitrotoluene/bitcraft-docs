@@ -30,8 +30,6 @@ export function generateTableDocs(
     const renderedType = renderType(tableType.type, parsedSchema);
     const doc = `# ${tableName}
 
-## Row type
-
 ${typeRef}
 
 \`\`\`typescript
