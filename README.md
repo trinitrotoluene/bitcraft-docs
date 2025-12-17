@@ -8,7 +8,13 @@ Welcome to the **unofficial** Bitcraft documentation. The aim of this project is
 
 ## Contributing
 
-TODO
+Contributions are welcome! For new content or significant edits it's worth discussing it before you spend a lot of time on it - you can find me in the bitminers Discord or raise an issue in this repo.
+
+If you want to contribute to or edit an existing article, see the `website/src/docs` folder.
+
+The auto-generated documentation comes from `schema-compiler`.
+
+There are plans to maintain a set of markdown files that can be merged into the schema to populate the `remarks` section. Once this functionality is present the README will be updated with instructions if you'd like to contribute to them.
 
 ## Guide
 
