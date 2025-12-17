@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Build
-        run: pnpm build
-
       - name: Fetch schema
         run: pnpm fetch-schema
+
+      - name: Build
+        run: pnpm build
 
       - name: Generate region module documentation
         run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-module.json --output-tables ../website/docs/region-tables --output-types ../website/docs/region-types --output-reducers ../website/docs/region-reducers
