@@ -18,3 +18,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+docs/global-tables/*.md
+docs/global-types/*.md
+docs/global-reducers/*.md
+docs/region-tables/*.md
+docs/region-types/*.md
+docs/region-reducers/*.md
