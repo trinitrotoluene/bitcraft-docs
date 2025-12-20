@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Authentication
 
-Reading [this blog post](https://spacetimedb.com/blog/who-are-you) is a good introduction to what is meant when SpacetimeDB Identifies are mentioned.
+Reading [this blog post](https://spacetimedb.com/blog/who-are-you) is a good introduction to SpacetimeDB `Identity`.
 
 Broadly, when you sign in with a 3rd party service (e.g. a cool Log in with Discord) button, the service (Discord, Google, Facebook, etc.) will provide you with a signed JWT (JSON Web Token) (which proves that they issued it), along with some metadata like your account ID and maybe your name or email address.
 
