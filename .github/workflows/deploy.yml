@@ -39,10 +39,10 @@ jobs:
         run: pnpm build
 
       - name: Generate region module documentation
-        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-module.json --output-tables ../website/docs/region-tables --output-types ../website/docs/region-types --output-reducers ../website/docs/region-reducers
+        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-module.json --output-tables ../website/docs/region-tables --output-types ../website/docs/region-types --output-reducers ../website/docs/region-reducers --manual-docs ../manual-docs
 
       - name: Generate global module documentation
-        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-global.json --output-tables ../website/docs/global-tables --output-types ../website/docs/global-types --output-reducers ../website/docs/global-reducers
+        run: cd schema-compiler && pnpm run start --schema ../schema-parser/test-data/schema-global.json --output-tables ../website/docs/global-tables --output-types ../website/docs/global-types --output-reducers ../website/docs/global-reducers --manual-docs ../manual-docs
 
       - name: Build site
         run: pnpm build:site
