@@ -28,6 +28,7 @@
     "@bitcraft-docs/schema-parser": "workspace:../schema-parser",
     "commander": "^14.0.2",
     "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
     "markdown-table": "^3.0.4",
     "zod": "^4.2.1"
   }

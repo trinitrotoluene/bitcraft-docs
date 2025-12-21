@@ -14,7 +14,20 @@ If you want to contribute to or edit an existing article, see the `website/src/d
 
 The auto-generated documentation comes from `schema-compiler`.
 
-There are plans to maintain a set of markdown files that can be merged into the schema to populate the `remarks` section. Once this functionality is present the README will be updated with instructions if you'd like to contribute to them.
+To manually annotate tables (reducer/type annotations are not currently supported), you create files in the `manual-docs` folder in the project root. This directory mirrors the file structure in `website/docs`, and the contents are merged with the automatically generated docs when `schema-compiler` is run with the `--manual-docs` flag (see `.github/workflow/deploy.yml`).
+
+A manual doc file looks like this (note that `relations` is optional)
+
+```md
+---
+relations:
+  - table: some_other_table
+    column: column_in_this_table
+    foreign_column: column_in_other_table
+---
+
+Anything in here goes into the "remarks" section above the table column type in the auto-docs
+```
 
 ## Guide
 

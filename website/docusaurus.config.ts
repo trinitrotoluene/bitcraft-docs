@@ -42,7 +42,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl:
-            "https://github.com/trinitrotoluene/bitcraft-docs/tree/master/",
+            "https://github.com/trinitrotoluene/bitcraft-docs/tree/master/website",
         },
         blog: false,
         theme: {

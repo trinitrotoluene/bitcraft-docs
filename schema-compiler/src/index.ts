@@ -9,7 +9,11 @@ program
   .option("--schema <path>", "Path to the input schema file")
   .option("--output-tables <path>", "Path to write table docs to")
   .option("--output-types <path>", "Path to write type docs to")
-  .option("--output-reducers <path>", "Path to write reducer docs to");
+  .option("--output-reducers <path>", "Path to write reducer docs to")
+  .option(
+    "--manual-docs <path>",
+    "Path to reference for manual docs to merge into the output",
+  );
 
 program.parse();
 
@@ -35,7 +39,12 @@ console.log(
 
 if (options.outputTables) {
   console.log("Generating table docs...");
-  generateTableDocs(parsedSchema, options.outputTables, options.outputTypes);
+  generateTableDocs(
+    parsedSchema,
+    options.outputTables,
+    options.outputTypes,
+    options.manualDocs,
+  );
 }
 
 if (options.outputTypes) {
