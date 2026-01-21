@@ -95,6 +95,10 @@ const config: Config = {
               label: "Bitminers Discord",
               href: "https://discord.gg/DzWmy6UrRm",
             },
+            {
+              label: "Belp!",
+              href: "https://belp.trinit.is",
+            },
           ],
         },
         {
