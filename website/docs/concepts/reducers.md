@@ -21,7 +21,7 @@ await subscribeAsync(conn, [
   "SELECT * FROM user_state WHERE entity_id = YOUR_PLAYER_ID",
 ]);
 
-const userState = conn.db.userState.entityId.find(BigInt("576460752379044783"));
+const userState = conn.db.userState.entityId.find(BigInt("YOUR_PLAYER_ID"));
 
 conn.db.userState.onUpdate((ctx, oldRow, newRow) => {
   onUserStateUpdate(conn, oldRow, newRow);
