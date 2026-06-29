@@ -8,12 +8,12 @@ sidebar_position: 3
 
 Bitcraft's backend has the following modules
 
-- `bitcraft-global`
-- `bitcraft-live-12` ... through to `bitcraft-9`
+- `bitcraft-live-global`
+- `bitcraft-live-1` ... through to `bitcraft-live-25` (although not all slots in the 5x5 grid are available as they are used for seasonal events)
 
 The `global` module holds some limited information needed across regions like some empire-related tables, player chat tab config, etc.
 
-Other information sits in `region` modules - these correspond to ingame regions, so R1 is the module `bitcraft-live-12`. These all share the same schema and generally contain more relevant information for developers.
+Other information sits in `region` modules - these correspond to ingame regions, so R12 is the module `bitcraft-live-12`. These all share the same schema and generally contain more relevant information for developers.
 
 :::info
 You'll notice that the global module schema docs on this site also include a bunch of tables present in the region tables, but you can generally disregard these as the region tables are the ones actually in use.
