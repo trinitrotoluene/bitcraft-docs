@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Querying data | Bitcraft Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://bitcraft.trinit.is/docs/concepts/querying-data"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Querying data | Bitcraft Docs"><meta data-rh="true" name="description" content="Global vs Region modules"><meta data-rh="true" property="og:description" content="Global vs Region modules"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://bitcraft.trinit.is/docs/concepts/querying-data"><link data-rh="true" rel="alternate" href="https://bitcraft.trinit.is/docs/concepts/querying-data" hreflang="en"><link data-rh="true" rel="alternate" href="https://bitcraft.trinit.is/docs/concepts/querying-data" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Querying data","item":"https://bitcraft.trinit.is/docs/concepts/querying-data"}]}</script><link rel="stylesheet" href="/assets/css/styles.dac56952.css">
-<script src="/assets/js/runtime~main.607740d4.js" defer="defer"></script>
-<script src="/assets/js/main.de403c5f.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.30f99618.js" defer="defer"></script>
+<script src="/assets/js/main.d350863d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -15,11 +15,11 @@
 <h2 class="anchor anchorTargetStickyNavbar_ZizN" id="global-vs-region-modules">Global vs Region modules<a href="#global-vs-region-modules" class="hash-link" aria-label="Direct link to Global vs Region modules" title="Direct link to Global vs Region modules" translate="no">​</a></h2>
 <p>Bitcraft&#x27;s backend has the following modules</p>
 <ul>
-<li class=""><code>bitcraft-global</code></li>
-<li class=""><code>bitcraft-1</code> ... through to <code>bitcraft-9</code></li>
+<li class=""><code>bitcraft-live-global</code></li>
+<li class=""><code>bitcraft-live-1</code> ... through to <code>bitcraft-live-25</code> (although not all slots in the 5x5 grid are available as they are used for seasonal events)</li>
 </ul>
 <p>The <code>global</code> module holds some limited information needed across regions like some empire-related tables, player chat tab config, etc.</p>
-<p>Other information sits in <code>region</code> modules - these correspond to ingame regions, so R1 is the module <code>bitcraft-1</code>. These all share the same schema and generally contain more relevant information for developers.</p>
+<p>Other information sits in <code>region</code> modules - these correspond to ingame regions, so R12 is the module <code>bitcraft-live-12</code>. These all share the same schema and generally contain more relevant information for developers.</p>
 <div class="theme-admonition theme-admonition-info admonition_LNW6 alert alert--info"><div class="admonitionHeading_Kr1I"><span class="admonitionIcon_M0xS"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_z9JC"><p>You&#x27;ll notice that the global module schema docs on this site also include a bunch of tables present in the region tables, but you can generally disregard these as the region tables are the ones actually in use.</p></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_ZizN" id="creating-subscriptions">Creating subscriptions<a href="#creating-subscriptions" class="hash-link" aria-label="Direct link to Creating subscriptions" title="Direct link to Creating subscriptions" translate="no">​</a></h2>
 <p>You declare a subscription in the SDK using an SQL-like language. It doesn&#x27;t support many of the features you might expect from SQL so it&#x27;s worth checking the <a href="https://spacetimedb.com/docs/sql/" target="_blank" rel="noopener noreferrer" class="">SQL reference</a> in the official documentation before trying to do something clever.</p>
