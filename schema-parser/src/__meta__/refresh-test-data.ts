@@ -9,7 +9,7 @@ const globalSchemaResponse = await fetch(
 
 console.log("Fetching module schema...");
 const moduleSchemaResponse = await fetch(
-  "https://bitcraft-early-access.spacetimedb.com/v1/database/bitcraft-1/schema?version=9",
+  "https://bitcraft-early-access.spacetimedb.com/v1/database/bitcraft-live-12/schema?version=9",
 );
 
 const globalSchema = await globalSchemaResponse.json();

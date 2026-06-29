@@ -36,7 +36,7 @@ if (userState?.canSignIn) {
 }
 ```
 
-Finally, you need to implement a handler to trigger a sign-in attempt when the queueing logic updates your user_tate record to `can_sign_in = true`.
+Finally, you need to implement a handler to trigger a sign-in attempt when the queueing logic updates your user_state record to `can_sign_in = true`.
 
 ```ts
 // onUserStateUpdate

@@ -35,16 +35,20 @@ This is a representation of SATS (a custom data format used by SpacetimeDB) in J
 First, we need to retrieve the schema from one of the region modules - it is exposed via HTTP. The returned JSON needs to be remapped slightly so the SpacetimeDB CLI can consume it - an example command to do so is given below:
 
 ```bash
-# replace bitcraft-1 with bitcraft-global if you're looking for the global bindings
+# replace bitcraft-live-12 with bitcraft-live-global if you're looking for the global bindings
 curl -s \
-  'https://bitcraft-early-access.spacetimedb.com/v1/database/bitcraft-1/schema?version=9' | \
+  'https://bitcraft-early-access.spacetimedb.com/v1/database/bitcraft-live-12/schema?version=9' | \
   jq '{ V9: . }' \
   > schema.json
 ```
 
 ### SpacetimeDB CLI
 
-First, make sure you have the latest version of the SpacetimeDB CLI installed - you can find the installation instructions [here](https://spacetimedb.com/install).
+:::warning
+Don't install/use the latest version (2.x) of the SpacetimeDB CLI
+:::
+
+First, make sure you have version `1.12.0` of the SpacetimeDB CLI installed - you can find the installation instructions [here](https://spacetimedb.com/install).
 
 You have a choice of 3 languages when generating bindings:
 
@@ -87,7 +91,7 @@ Use `conn.Db` to see what tables are available to you, but remember that they wi
 ```ts
 DbConnection.builder()
   .withUri("wss://bitcraft-early-access.spacetimedb.com")
-  .withModuleName("bitcraft-1")
+  .withModuleName("bitcraft-live-12")
   .withToken(process.env.AUTH_TOKEN)
   .onConnect((conn, identity) => console.log("Hello, Bitcraft!"))
   .build();
