@@ -6,7 +6,7 @@ sidebar_position: 1
 
 As with most of the articles here, start by referring to the official [SpacetimeDB docs](https://spacetimedb.com/docs/#what-is-spacetimedb).
 
-Marketing-speak aside, from the perspective of a user trying to interact with Bitcraft we don't need to think too deeply about the rationale for SpacetimeDB as a technology. Fundamentally it's a server that speaks a very particular query language (that happens to look like SQL) - a "module" is really just some sandboxed WebAssembly code that runs a Bitcraft game server. There's a `bitcraft-global` module e.g. for empire data, and each region runs as a separate module `bitcraft-live-12`, `bitcraft-2`, etc.
+Marketing-speak aside, from the perspective of a user trying to interact with Bitcraft we don't need to think too deeply about the rationale for SpacetimeDB as a technology. Fundamentally it's a server that speaks a very particular query language (that happens to look like SQL) - a "module" is really just some sandboxed WebAssembly code that runs a Bitcraft game server. There's a `bitcraft-global` module e.g. for empire data, and each region runs as a separate module `bitcraft-live-12`, `bitcraft-live-13`, etc.
 
 ## Tables
 
